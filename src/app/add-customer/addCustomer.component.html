@@ -1,0 +1,60 @@
+
+
+
+<div class="container">
+   <h3>Add customer page</h3> <br>
+  <form id = "addCustomerForm" name = "addCustomerForm" #addCustomerData = "ngForm" (ngSubmit) = "addNewCustomerRecord(addCustomerData.value)">
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Customer Id</label>
+      <div class="col-5">
+    <input class="form-control" type="text" name="id" id="id" placeholder="Customer Id" ngModel>
+  </div>
+    </div>
+     <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+      <div class="col-5">
+    <input class="form-control" type="search" name="first" id="first" placeholder="first" ngModel >
+  </div>
+  <div class="col-5">
+    <input class="form-control" type="search" name="last" id="last" placeholder="last" ngModel>
+  </div>
+    </div>
+    <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Birthday</label>
+      <div class="col-5">
+    <input class="form-control" type="text" name="birthday" id="birthday" placeholder="Birthday" ngModel>
+  </div>
+    </div>
+     <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Gender</label>
+      <div class="col-5">
+    <input class="form-control" type="text" name="gender" id="gender" placeholder="Gender" ngModel>
+  </div>
+    </div>
+     <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Last Contact</label>
+      <div class="col-5">
+    <input class="form-control" type="text"  name="lastContact" id="lastContact" placeholder="Last Contact" ngModel>
+  </div>
+    </div>
+     <div class="form-group row">
+      <label for="inputEmail3" class="col-sm-2 col-form-label">Customer's Lifetime Value</label>
+      <div class="col-5">
+    <input class="form-control" type="text" name="customerLifetimeValue" id="Customer's Lifetime Value" placeholder="customerLifetimeValue" ngModel>
+  </div>
+    </div>
+    <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="submit" class="btn btn-primary">Create Customer</button>
+      </div>
+    </div>
+     <div class="form-group row">
+      <div class="offset-sm-2 col-sm-10">
+        <button type="button" class="btn btn-primary" routerLink = "/">Return to Home</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="container">
+	<h4 *ngIf = "isRecordInserted" >{{successMSG}}</h4>
+</div>
